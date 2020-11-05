@@ -11,7 +11,7 @@
 <main class="main-container profile">
     <header>
         <div class="left-icon-cont">
-            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+            <i class="fa fa-long-arrow-left" aria-hidden="true" onclick="goBack()"></i>
         </div>
         <h1>प्रोफाइल</h1>
         <div class="right-icon-cont">
@@ -54,4 +54,10 @@
     </ul>
 </main>
 </body>
+<script type="text/javascript">
+    
+function goBack() {
+    window.history.back();
+}
+</script>
 </html>

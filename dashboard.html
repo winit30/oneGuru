@@ -3,6 +3,7 @@
 <title>OneAxis</title>
 <head>
     <link rel="stylesheet" href="./common/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -11,11 +12,7 @@
 <body class="dashboard">
 
 <main class="main-container dashboard-cont">
-    <div class="menubar-cont">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-    </div>
+    <i class="fa fa-user user-icon" aria-hidden="true" onclick="navigateToProfile()"></i>
     <h1 class="dashboard-heading">
       OneAxis Learning Academy <br>
       पैसो के बारे में सबकुछ जाने
@@ -107,7 +104,11 @@
 
 <script>
     function navigateToModule() {
-        window.location.assign("./module.html")
+        window.location.assign("./module.html");
+    }
+    
+    function navigateToProfile() {
+        window.location.assign("./profile.html");
     }
 </script>
 </html>

@@ -257,6 +257,11 @@ body.dashboard {
 	background-color: #f7f9fc
 }
 
+.user-icon {
+	font-size: 24px !important;
+  color: #97154e;
+}
+
 .dashboard-cont .dashboard-heading {
 		font-size: 26px;
 		line-height: 36px;
@@ -562,6 +567,30 @@ color: rgba(249, 164, 20, 0.3);
 	align-items: center;
 	justify-content: space-between;
 	flex: 1;
+}
+
+.course .popup {
+		position: fixed;
+    z-index: 99;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+		padding: 90px 20px;
+}
+
+.course .popup iframe {
+		width: 100%;
+}
+
+.course .close-icon {
+	color: #ffffff;
+    font-size: 27px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 /******** Video course css ends ******/

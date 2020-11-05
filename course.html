@@ -25,7 +25,7 @@
                 </div>
             </div>
             <p class="video-view-data">120K Views</p>
-            <button type="button" name="button" class="bargandi-button video-play-button">वीडियो प्ले करे</button>
+            <button type="button" name="button" class="bargandi-button video-play-button" onclick="showVideo()">वीडियो प्ले करे</button>
         </div>
     </div>
 
@@ -80,6 +80,25 @@
             </li>
         </ul>
     </div>
+    <div id="popup-cont"><div>
 </main>
 </body>
+
+<script type="text/javascript">
+      var videoString = '<div class="popup">';
+          videoString += '<i class="fa fa-times-circle close-icon" aria-hidden="true" onclick="hideVideo()"></i>';
+          videoString += '<iframe width="560" height="315" src="https://www.youtube.com/embed/pwAcRYKfYhg?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          videoString += '</div>';
+          
+      var popupCont = document.getElementById('popup-cont');
+      
+      function showVideo() {
+          popupCont.innerHTML = videoString;
+      }    
+      
+      function hideVideo() {
+          popupCont.innerHTML = '';
+      }  
+</script>
+
 </html>
