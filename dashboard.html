@@ -3,6 +3,9 @@
 <title>OneAxis</title>
 <head>
     <link rel="stylesheet" href="./common/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="dashboard">
@@ -20,44 +23,71 @@
     <div class='categories-cont'>
         <div class="category-item">
             <div class="category-content">
-                <img src="./common/assets/dashboard/db-image-1.png" class="cat-icons">
+                <img src="./common/assets/dashboard/1.png" class="cat-icons">
                 <p>पर्सनल फाइनेंस के 10 बुनियादी नियम</p>
             </div>
         </div>
         <div class="category-item">
             <div class="category-content">
-                <img src="./common/assets/dashboard/db-image-2.png" class="cat-icons">
+                <img src="./common/assets/dashboard/2.png" class="cat-icons">
                 <p>अपना मनी मैनेजमेंट कौशल जानने के लिए प्रश्नोत्तरी में भाग ले</p>
             </div>
         </div>
         <div class="category-item">
             <div class="category-content">
-                <img src="./common/assets/dashboard/db-image-3.png" class="cat-icons">
+                <img src="./common/assets/dashboard/3.png" class="cat-icons">
                 <p>आपके प्रश्न यहां पूछे</p>
             </div>
         </div>
-        <div class="category-item">
+        <div class="category-item active" onclick="navigateToModule()">
             <div class="category-content">
-                <img src="./common/assets/dashboard/db-image-4.png" class="cat-icons">
+                <img src="./common/assets/dashboard/4.png" class="cat-icons">
                 <p>फाइनेंशियल प्लानिंग कोर्स ले</p>
             </div>
         </div>
     </div>
+    
     <div class="testimonial-cont">
       <div class="category-item width100">
           <div class="category-content">
               <h2>आपके जैसे अन्य लोगों का यह कहना है</h2>
-              <div class="testimonial-intro">
-                  <img src="./common/assets/dashboard/testimonial.png" class="test-images">
-                  <div class="testimonial-text">
-                      <p>सुहासिनी</p>
-                      <p class="desc">लोकल बिजनेस वूमन</p>
-                  </div>
-              </div>
-              <p class="full-desc">"एक संपूर्ण पाठ्यक्रम जो मुझे अपनी गति से सीखने में सक्षम बनाता है"</p>
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="testimonial-intro">
+                            <img src="./common/assets/dashboard/testimonial.png" class="test-images">
+                            <div class="testimonial-text">
+                                <p>सुहासिनी</p>
+                                <p class="desc">लोकल बिजनेस वूमन</p>
+                            </div>
+                        </div>
+                        <p class="full-desc">"एक संपूर्ण पाठ्यक्रम जो मुझे अपनी गति से सीखने में सक्षम बनाता है"</p>
+                    </div>
+                    <div class="item ">
+                        <div class="testimonial-intro">
+                            <img src="./common/assets/dashboard/umang.png" class="test-images">
+                            <div class="testimonial-text">
+                                <p>उमंग</p>
+                                <p class="desc">दिल्ली</p>
+                            </div>
+                        </div>
+                        <p class="full-desc">"अब मुझे इंवेस्टमेंट्स से डर नहीं लगता"</p>
+                    </div>
+                  </div>  
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                  </ol>
+              </div>  
+              
           </div>
       </div>
     </div>
+    
+    
     <div class='categories-cont'>
         <div class="category-item">
             <div class="category-content">
@@ -74,4 +104,10 @@
     </div>
 </main>
 </body>
+
+<script>
+    function navigateToModule() {
+        window.location.assign("./module.html")
+    }
+</script>
 </html>

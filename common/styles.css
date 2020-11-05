@@ -50,26 +50,45 @@ table {
 }
 
 .main-container {
-  padding: 16px;
+  padding: 20px;
+}
+
+.mainpage header img {
+		width: 384px;
+}
+
+.mainpage header .header-bar {
+		width: 100%;
+    height: 22px;
+    background-color: #97144d;
+    position: absolute;
+    top: 0;
+    left: 0;
+		z-index: -1;
 }
 
 .main-heading {
-  color: #97144d;
-  font-size: 26px;
-  margin-bottom: 8px;
+	  color: #97144d;
+	  font-size: 26px;
+	  margin-bottom: 8px;
+		line-height: 32px;
+		margin-top: 5px;
 }
 
 .main-desc {
   color: #2e374d;
+	font-size: 15px;
 }
 
 .lang-cont {
   margin-top: 40px;
 }
 
-.lang-cont li {
+.lang-cont li a {
   display: flex;
   padding: 16px 0;
+	align-items: center;
+	text-decoration: none;
 }
 
 .list-img-cont {
@@ -83,14 +102,11 @@ table {
 
 .list-text-cont {
   margin-left: 18px;
-  display: block;
-  padding-top: 8px;
 }
 
 .list-text-cont p {
     color: #242833;
-    font-size: 16px;
-    margin-bottom: 5px
+    font-size: 26px;
 }
 
 .list-text-cont span {
@@ -131,7 +147,7 @@ table {
 
 .slider-cont .slider-content {
     text-align: center;
-    padding-top: 90px;
+    padding-top: 20px;
     width: 300px;
     float: left;
 }
@@ -184,26 +200,44 @@ table {
   color: #242833;
   margin-top: 49px;
   line-height: 32px;
+	font-weight: 600;
 }
 
 .slider-cont .text-cont p.desc {
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 24px;
+  line-height: 40px;
   color: #2e374d;
-  margin-top: 31px;
+  margin-top: 30px;
+	font-weight: 400;
 }
 
 .slider-cont .button-cont {
   padding-top: 40px;
+	margin-bottom: 25px;
 }
 
-button {
+button, .button-style {
   width: 124px;
   height: 50px;
   border-radius: 31px;
   border: 0px;
   margin: 0 6px;
 	font-size: 16px;
+}
+
+.newButton {
+	width: 124px;
+	height: 50px;
+	border-radius: 31px;
+	border: 0px;
+	margin: 0 6px;
+	font-size: 16px;
+	display: inline-block;
+}
+
+.link-button {
+		color: #2e374d;
+		text-decoration: none;
 }
 
 .slider-cont .button-cont button:focus {
@@ -252,12 +286,25 @@ body.dashboard {
 		border-radius: 10px;
  		box-shadow: 0 6px 10px 0 rgba(131, 134, 163, 0.12);
 		text-align: center;
+		height: 100%;
+}
+
+.category-item.active .category-content {
+			background-color: #97144d;
 }
 
 .categories-cont .category-content p {
 		font-size: 15px;
 		line-height: 22px;
 		margin-top: 19px;
+}
+
+.testimonial-cont .category-content {
+		height: 331px;
+}
+
+.category-item.active .category-content p {
+		color: #ffffff
 }
 
 .menubar-cont {
@@ -298,7 +345,18 @@ body.dashboard {
 .testimonial-cont .testimonial-text {
 	float: left;
 	text-align: left;
-	padding: 10px 0;
+}
+
+.carousel-indicators li {
+		background-color: #d8d8d8 !important;
+}
+
+.carousel-indicators li.active {
+		background-color: #242833 !important;
+}
+
+.carousel-indicators {
+	bottom: -40px !important;
 }
 
 .testimonial-text p {
@@ -314,7 +372,7 @@ body.dashboard {
 }
 
 .category-content h2 {
-		font-size: 26px;
+		font-size: 20px;
 		font-weight: 400;
 		line-height: 32px;
 }
@@ -334,10 +392,17 @@ body.dashboard {
 
 /******** Module css starts ******/
 
+.modules {
+	padding-top: 40px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .modules .modules-heading {
 		font-size: 34px;
 		color: #242833;
 		font-weight: 400;
+		margin-left: 20px;
 }
 
 .modules ul {
@@ -347,7 +412,8 @@ body.dashboard {
 }
 
 .modules ul li {
-	margin-bottom: 36px;
+		margin: 0 14px 27px 14px;
+    padding: 12px 16px;
 }
 
 .modules .module-image {
@@ -543,4 +609,66 @@ color: rgba(249, 164, 20, 0.3);
 		color: #2e374d;
 		line-height: 22px;
 		margin: 36px 0;
+}
+
+.profile li {
+		display: flex;
+		margin-bottom: 22px;
+}
+
+.profile .first-content img {
+		width: 52px;
+		height: 52px;
+		margin-right: 18px;
+}
+
+.profile .second-content img {
+	width: 36px;
+	height: 36px;
+	margin-right: 18px;
+}
+
+.profile .third-content img {
+	width: 36px;
+	height: 36px;
+	margin-right: 18px;
+}
+
+.profile .third-content .text-bar-cont, .profile .second-content .text-bar-cont{
+		flex: 1;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.profile .first-content p {
+	margin-top: 8px;
+}
+
+.profile li p {
+		font-size: 16px;
+		color: #242833
+}
+
+.profile li .level-bar-cont {
+		width: 100%;
+		background-color: #e4e5f5;
+		height: 3px;
+		margin-top: 12px;
+		border-radius: 4px;
+}
+
+.profile li .level-bar-cont .level-bar {
+		width: 50%;
+		height: 3px;
+		background: rgb(127,187,251);
+		background: linear-gradient(0deg, rgba(127,187,251,1) 0%, rgba(155,141,254,1) 100%);
+}
+
+.profile li .text-bar-cont {
+		flex: 1;
+}
+
+.profile .light-color {
+	color: #d3d7e0
 }
