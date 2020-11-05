@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<title>OneAxis</title>
+<head>
+    <link rel="stylesheet" href="./common/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<main class="main-container">
+  <div class="slider-wrapper">
+    <div class="slider-cont" id="slider">
+        <div class="slider-one slider-content">
+            <div class="img-cont">
+                <img src="./common/assets/slider-images/image-2.png" alt="adfa">
+                <img class="sub-image" src="./common/assets/slider-images/image-sub-2.2.png" alt="ad">
+                <img class="sub-image-2" src="./common/assets/slider-images/image-sub-2.png" alt="ad">
+            </div>
+            <div class="text-cont">
+                <p>पैसे से संबंधित</p>
+                <p class="desc">बचत <br> इमरजेंसी फंड्स <br> बैंकिंग</p>
+            </div>
+            <div class="button-cont">
+                <button type="button" name="button" class="bargandi-button" onclick="slideLeft()">आगे</button>
+            </div>
+        </div>
+
+        <div class="slider-two slider-content">
+            <div class="img-cont">
+                <img src="./common/assets/slider-images/image-1.png" alt="adfa">
+                <img src="./common/assets/slider-images/image-sub-1.png" alt="ad" class="sub-image">
+            </div>
+            <div class="text-cont">
+                <p>एक रिस्पॉन्सिबल <br> इंवेस्टर बने</p>
+                <p class="desc">इन्वेस्टमेंट के तरीके <br> असेट का बंटवारा <br> बायस और रिस्क</p>
+            </div>
+            <div class="button-cont">
+                <button type="button" name="button" onclick="slideRight()">पीछे</button>
+                <button type="button" name="button" class="bargandi-button" onclick="slideLeft()">आगे</button>
+            </div>
+        </div>
+
+        <div class="slider-three slider-content">
+            <div class="img-cont">
+                <img src="./common/assets/slider-images/image-3.png" alt="adfa">
+                <img src="./common/assets/slider-images/image-sub-3.png" alt="ad" class="sub-image">
+            </div>
+            <div class="text-cont">
+                <p>अच्छे कर्जे और डूबते कर्जे <br> के बारे में समझिए</p>
+                <p class="desc">कार्ड्स <br> लॉन <br> क्रेडिट स्कोर</p>
+            </div>
+            <div class="button-cont">
+                <button type="button" name="button" onclick="slideRight()">पीछे</button>
+                <button type="button" name="button" class="bargandi-button">डैशबोर्ड पर जाएं</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</main>
+</body>
+<script type="text/javascript">
+
+  const slider = document.getElementById('slider');
+
+  let left = 0;
+
+  function slideLeft() {
+      if(left <= -600) {
+        return;
+      }
+
+      left = left - 300;
+      slider.style.left = left + 'px';
+  }
+
+  function slideRight() {
+      if(left === 0) {
+        return;
+      }
+      left = left + 300;
+      slider.style.left = left + 'px';
+  }
+
+</script>
+</html>
